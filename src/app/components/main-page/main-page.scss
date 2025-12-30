@@ -1,0 +1,13 @@
+.pet-container {
+  background: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)';
+  border-radius: '1rem';
+  position: 'relative';
+}
+
+.pet-animation {
+  font-size: '6rem';
+  //animation: isAnimating ? 'bounce 0.5s ease' : isAlive ? 'breathe 3s ease-in-out infinite' : 'none';
+  display: 'inline-block';
+  //filter: !isAlive ? 'grayscale(100%)' : 'none';
+}   
+ 

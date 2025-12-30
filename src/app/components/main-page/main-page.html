@@ -1,0 +1,18 @@
+<p>main-page works!</p>
+
+
+<div className="text-center mb-4 py-5 pet-container">
+    <div [ngStyle]="{
+        fontSize: '6rem',
+        animation: isAnimating ? 'bounce 0.5s ease' : isAlive ? 'breathe 3s ease-in-out infinite' : 'none',
+        display: 'inline-block',
+        filter: !isAlive ? 'grayscale(100%)' : 'none'}"
+    >
+    {{isAlive ? '🐶' : '💀'}}
+    </div>
+    <!-- <div className="mt-3"> -->
+    <!-- <h3 [ngStyle]="{color: '#333', fontWeight: 'bold', fontSize: '1.5rem' }">
+        {{getPetMessage()}}
+    </h3> -->
+    <!-- </div> -->
+</div>
