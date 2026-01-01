@@ -1,54 +1,54 @@
 
-.pet-container {
-  background: linear-gradient(
-    180deg,
-    rgb(97, 177, 233) 45%, 
-    rgb(50 156 229 / 65%) 50%,
-    rgb(25 211 189 / 72%) 50%, 
-    rgb(25, 211, 189) 55%);
-  max-width: 400px;
-  height: 200px;
+.ambience-container {
+  background: linear-gradient(180deg, rgb(97, 177, 233) 45%, rgba(50, 156, 229, 0.65) 50%, rgba(25, 211, 189, 0.72) 50%, rgb(25, 211, 189) 55%);
+    max-width: 400px;
+    position: relative;
+    width: 350px;
+    height: 260px;
+    background-color: #3fb8a5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
-
-.arvore {
+.tree {
   position: relative;
   width: 165px;
   height: 170px;
+  bottom: 60px;
+  &_leaf {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 120px solid #2e7d32;  
+  }
+  
+  .f2 {
+    bottom: 40px;
+    border-left-width: 80px;
+    border-right-width: 80px;
+    border-bottom-width: 100px;
+  }
+
+  .f1 {
+    border-left-width: 60px;
+    border-right-width: 60px;
+    border-bottom-width: 80px;
+  }
+
+  &_trunk {
+    margin: 0 auto;
+    width: 30px;
+    height: 40px;
+    background-color: #6d4c41;
+    position: relative;
+    top: 130px;
+  }
 }
 
-/* Folhas (triângulos) */
-.folha {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 120px solid #2e7d32;
-}
-
-.folha.f2 {
-  bottom: 40px;
-  border-left-width: 80px;
-  border-right-width: 80px;
-  border-bottom-width: 100px;
-}
-
-.folha.f1 {
-  border-left-width: 60px;
-  border-right-width: 60px;
-  border-bottom-width: 80px;
-}
-
-/* Tronco */
-.tronco {
-  margin: 0 auto;
-  width: 30px;
-  height: 40px;
-  background-color: #6d4c41;
-  position: relative;
-  top: 130px;
-}
  
