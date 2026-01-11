@@ -1,15 +1,23 @@
+.container {
+  border: black solid 1px;
+  border-radius: 15px;
+}
+
+.card-pet_header {
+  background: linear-gradient(135deg, rgb(240, 147, 251) 0%, rgb(245, 87, 108) 100%);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
 
 .ambience-container {
   background: linear-gradient(180deg, rgb(97, 177, 233) 45%, rgba(50, 156, 229, 0.65) 50%, rgba(25, 211, 189, 0.72) 50%, rgb(25, 211, 189) 55%);
-    max-width: 400px;
-    position: relative;
-    width: 350px;
-    height: 260px;
-    background-color: #3fb8a5;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  position: relative;
+  height: 260px;
+  background-color: #3fb8a5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 15px;
 }
 
 .tree {
@@ -51,4 +59,10 @@
   }
 }
 
+.progress {
+  padding-left: 0px;
+  margin-left: 12px;
+  padding-right: 0px;
+  margin-right: 12px;
+}
  
