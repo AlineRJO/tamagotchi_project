@@ -76,12 +76,14 @@
 
   <div class="row p-4">
     <div class="col-md-6">
-      <button class="btn btn-primary col-md-12">
+      <button class="btn btn-primary col-md-12"
+        (click)="addTimeOnProgress(hugryprogressBar, 10)">
         🍖 Alimentar
       </button>
     </div>
     <div class="col-md-6">
-       <button class="btn btn-primary col-md-12">
+       <button class="btn btn-primary col-md-12"
+        (click)="addTimeOnProgress(happyProgressBar, 10)">
         ❤️ Dar Carinho
       </button>
     </div>   
@@ -89,12 +91,15 @@
 
   <div class="row px-4 pb-4">
     <div class="col-md-6">
-      <button class="btn btn-primary col-md-12">
+      <button class="btn btn-primary col-md-12"
+        (click)="addTimeOnProgress(temperatureprogressBar, -10)"
+        [disabled]="temperatureprogressBar() === 0">
         ❄️ Esfriar
       </button>
     </div>
     <div class="col-md-6">
-      <button class="btn btn-primary col-md-12">
+      <button class="btn btn-primary col-md-12"
+        (click)="addTimeOnProgress(temperatureprogressBar, 10)">
         🔥 Aquecer
       </button>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal, WritableSignal } from '@angular/core';
 import { PetDisplay } from '../pet/pet-display/pet-display'; 
 import { CommonModule } from '@angular/common';
 import { interval, Subscription } from 'rxjs';
@@ -30,8 +30,7 @@ export class MainPage implements OnInit, OnDestroy {
   }
 
   startCountdown(): void {
-    // TODO: DEVERÁ SER CRIADO ALGO PARA ADD TEMPO DENTRO DO IF
-    this.happyCountSub = interval(1000).subscribe(() => {
+     this.happyCountSub = interval(1000).subscribe(() => {
       if (this.happyProgressBar() > 0) {
         this.happyProgressBar.update((v: any) => v - 1);
       } else {
@@ -78,6 +77,10 @@ export class MainPage implements OnInit, OnDestroy {
     } else {
       return 'bg-warning';
     }
+  }
+
+  addTimeOnProgress(signal: WritableSignal<number>, timeValue: number): void {    
+    signal.update(v => Math.max(0, Math.min(v + timeValue, 100)));
   }
 
 }
