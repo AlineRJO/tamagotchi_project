@@ -4,65 +4,20 @@
         🐾 Meu Pet Virtual
     </h1>
   </div>
-  <div class="row d-flex justify-content-between align-items-center mb-2">
-    <span class="col-md-6 fw-semibold">❤️ Felicidade</span>
-    <span class="col-md-1 badge bg-secondary">{{happyProgressBar()}}%</span>
-  </div>
-  <div class="row">
-    <div class="progress col">
-      <div
-        class="progress-bar progress-bar-striped progress-bar-animated"
-        role="progressbar"
-        [style.width.%]="happyProgressBar()"
-        [ngClass]="updateProgressClass(happyProgressBar())"
-        [attr.aria-valuenow]="happyProgressBar()"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        {{ happyProgressBar() }}%
-      </div>
-    </div> 
-  </div>
 
-  <div class="row d-flex justify-content-between align-items-center mb-2">
-    <span class="col-md-6 fw-semibold">🍖 Fome</span>
-    <span class="col-md-1 badge bg-secondary">{{hugryprogressBar()}}%</span>
-  </div>
-  <div class="row">
-    <div class="progress col">
-      <div
-        class="progress-bar progress-bar-striped progress-bar-animated"
-        role="progressbar"
-        [style.width.%]="hugryprogressBar()"
-        [ngClass]="updateProgressClass(hugryprogressBar())"
-        [attr.aria-valuenow]="hugryprogressBar()"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        {{ hugryprogressBar() }}%
-      </div>
-    </div>
-  </div>  
+  <app-progress-control 
+    [initialValue]="happyProgressBar()"
+    progressLabel="❤️ Felicidade">
+  </app-progress-control>
+  <app-progress-control 
+    [initialValue]="hugryprogressBar()"
+    progressLabel="🍖 Fome">
+  </app-progress-control>
+  <app-progress-control 
+    [initialValue]="temperatureprogressBar()"
+    progressLabel="🌡️ Temperatura">
+  </app-progress-control>
 
-  <div class="row d-flex justify-content-between align-items-center mb-2">
-    <span class="col-md-6 fw-semibold">🌡️ Temperatura</span>
-    <span class="col-md-1 badge bg-secondary">{{temperatureprogressBar()}}%</span>
-  </div>
-  <div class="row">
-    <div class="progress col">
-      <div
-        class="progress-bar progress-bar-striped progress-bar-animated"
-        role="progressbar"
-        [style.width.%]="temperatureprogressBar()"
-        [ngClass]="updateProgressClass(temperatureprogressBar())"
-        [attr.aria-valuenow]="temperatureprogressBar()"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        {{ temperatureprogressBar() }}%
-      </div>
-    </div>
-  </div>
   <div class="row py-4">   
     <div class="ambience-container">
         <div class="tree">
@@ -102,9 +57,7 @@
         (click)="addTimeOnProgress(temperatureprogressBar, 10)">
         🔥 Aquecer
       </button>
-    </div>
-    
-    
+    </div>    
   </div>
   
 </div>
