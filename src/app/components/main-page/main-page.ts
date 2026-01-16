@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit, signal, WritableSignal } from '@angular/c
 import { PetDisplay } from '../pet/pet-display/pet-display'; 
 import { CommonModule } from '@angular/common';
 import { interval, Subscription } from 'rxjs';
+import { ProgressControl } from "../progress-control/progress-control";
 
 
 @Component({
@@ -9,7 +10,7 @@ import { interval, Subscription } from 'rxjs';
   standalone: true, 
   templateUrl: './main-page.html',
   styleUrl: './main-page.scss',
-  imports: [PetDisplay, CommonModule],
+  imports: [PetDisplay, CommonModule, ProgressControl],
 })
 export class MainPage implements OnInit, OnDestroy {
   
